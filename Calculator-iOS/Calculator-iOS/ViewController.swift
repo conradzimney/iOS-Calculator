@@ -59,7 +59,16 @@ class ViewController: UIViewController {
             screen.text = "fact"
             num1 = Int(num1Expression)!
             num1Expression = ""
-            evaluate()
+            if num1 > 20 {
+                screen.text = "Please enter a smaller #"
+                return
+            }
+            var fact = 1
+            for var i = 1; i <= num1; i++ {
+                fact *= i
+            }
+            screen.text = "\(fact)"
+            // evaluate()
             num1 = 0
             operation = ""
         }
@@ -106,12 +115,6 @@ class ViewController: UIViewController {
             screen.text = "\(avg)"
         case "count":
             screen.text = "\(numList.count)"
-        case "fact":
-            var fact = 1
-            for var i = 1; i <= num1; i++ {
-                fact *= i
-            }
-            screen.text = "\(fact)"
         default:
             screen.text = "Please enter # operation #"
         }
