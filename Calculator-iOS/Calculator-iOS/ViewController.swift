@@ -100,7 +100,7 @@ class ViewController: UIViewController {
             screen.text = "\(num1 + num2)"
         case "-":
             screen.text = "\(num1 - num2)"
-        case "*":
+        case "X":
             screen.text = "\(num1 * num2)"
         case "/":
             screen.text = "\(num1 / num2)"
@@ -119,6 +119,7 @@ class ViewController: UIViewController {
             screen.text = "Please enter # operation #"
         }
     }
+
     
 }
 
